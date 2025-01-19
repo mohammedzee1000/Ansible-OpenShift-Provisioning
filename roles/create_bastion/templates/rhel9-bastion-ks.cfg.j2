@@ -47,7 +47,7 @@ selinux --permissive
 ignoredisk --only-use=vda
 
 # System bootloader configuration
-bootloader --append="crashkernel=auto{{ ' fips=1' if .install_config.fips else '' }}" --location=mbr --boot-drive=vda
+bootloader --append="crashkernel=auto{{ ' fips=1' if install_config.fips else '' }}" --location=mbr --boot-drive=vda
 
 # Partition clearing information
 clearpart --all --initlabel --drives=vda
