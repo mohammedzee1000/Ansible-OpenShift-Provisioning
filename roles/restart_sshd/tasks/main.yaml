@@ -1,0 +1,12 @@
+---
+# Restart SSHD safely
+
+- name: Ensure sshd service is restarted
+  ansible.builtin.service:
+    name: sshd
+    state: restarted
+
+- name: Ensure sshd is enabled at boot
+  ansible.builtin.service:
+    name: sshd
+    enabled: true

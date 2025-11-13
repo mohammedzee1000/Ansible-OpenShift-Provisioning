@@ -113,6 +113,7 @@
   roles:
     - { role: attach_subscription, when: env.redhat.manage_subscription }
     - install_packages
+    - restart_sshd
     - ssh_ocp_key_gen
     - set_firewall
     - { role: dns, when: env.bastion.options.dns }
